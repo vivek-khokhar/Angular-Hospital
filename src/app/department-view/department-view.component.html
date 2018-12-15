@@ -1,0 +1,15 @@
+<div>
+  <div><h3>Hospital List</h3></div>
+  <div><button>Sort by Department Name</button> <button>Back</button></div>
+  <div>
+    <hr />
+    <div>Department Name</div>
+    <div>Head of Department</div>
+    <div>Contact Number</div>
+    <div *ngFor="let department of departments">
+      <div>{{ department.departmentname }}</div>
+      <div>{{ department.head }}</div>
+      <div>{{ department.contactnumber }}</div>
+    </div>
+  </div>
+</div>

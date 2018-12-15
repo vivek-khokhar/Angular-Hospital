@@ -1,0 +1,17 @@
+<div>
+  <div><h3>Hospital List</h3></div>
+  <div><button (click) = "sortHospital()">Sort by Hospital Name</button></div>
+  <div>
+    <hr />
+    <div>Department Name</div>
+    <div>Contact Number</div>
+    <div>View department</div>
+    <div *ngFor="let hospital of hospitals">
+      <div>{{ hospital.hospitalname }}</div>
+      <div>{{ hospital.contactnumber }}</div>
+      <div>
+        <a [routerLink]="['/department',hospital.hospitalname]" routerLinkActive="router-link-active" >View</a>
+      </div>
+    </div>
+  </div>
+</div>
