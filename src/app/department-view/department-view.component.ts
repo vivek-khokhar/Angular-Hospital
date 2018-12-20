@@ -18,4 +18,10 @@ export class DepartmentViewComponent implements OnInit {
       }
     );
   }
+
+  sortByDepartment() {
+    this.departments = this.departments.sort((a, b) => {
+      return a.departmentname < b.departmentname ? -1 : 1;
+    });
+  }
 }

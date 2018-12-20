@@ -22,7 +22,7 @@ export class HospitalViewComponent implements OnInit {
   sortHospital() {
     this.hospitals = this.hospitals.sort((a, b) => {
       return a.hospitalname >= b.hospitalname ? 1 : -1;
-    })
+    });
   }
 
 }

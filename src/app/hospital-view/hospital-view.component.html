@@ -1,15 +1,17 @@
 <div>
-  <div><h3>Hospital List</h3></div>
-  <div><button (click) = "sortHospital()">Sort by Hospital Name</button></div>
+  <div class = "title"><h3>Hospital List</h3></div>
+  <div><button class="button" (click) = "sortHospital()">Sort by Hospital Name</button></div>
   <div>
     <hr />
-    <div>Department Name</div>
-    <div>Contact Number</div>
-    <div>View department</div>
-    <div *ngFor="let hospital of hospitals">
-      <div>{{ hospital.hospitalname }}</div>
-      <div>{{ hospital.contactnumber }}</div>
-      <div>
+    <div class = "row">
+    <div class ="column bold">Department Name</div>
+    <div class ="column bold">Contact Number</div>
+    <div class ="column bold">View department</div>
+  </div>
+    <div class="row" *ngFor="let hospital of hospitals">
+      <div class ="column">{{ hospital.hospitalname }}</div>
+      <div class ="column">{{ hospital.contactnumber }}</div>
+      <div class ="column">
         <a [routerLink]="['/department',hospital.hospitalname]" routerLinkActive="router-link-active" >View</a>
       </div>
     </div>

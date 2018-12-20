@@ -1,15 +1,22 @@
 <div>
-  <div><h3>Hospital List</h3></div>
-  <div><button>Sort by Department Name</button> <button>Back</button></div>
+  <div class="title"><h3>Department List</h3></div>
   <div>
-    <hr />
-    <div>Department Name</div>
-    <div>Head of Department</div>
-    <div>Contact Number</div>
-    <div *ngFor="let department of departments">
-      <div>{{ department.departmentname }}</div>
-      <div>{{ department.head }}</div>
-      <div>{{ department.contactnumber }}</div>
-    </div>
+    <button class="button" (click)="sortByDepartment()">
+      Sort by Department
+    </button>
+    <button class="button" [routerLink]="['/']">Back</button>
+  </div>
+</div>
+<div>
+  <hr />
+  <div class="row">
+    <div class="column bold">Department Name</div>
+    <div class="column bold">Head of Department</div>
+    <div class="column bold">Contact Number</div>
+  </div>
+  <div class="row" *ngFor="let department of departments">
+    <div class="column">{{ department.departmentname }}</div>
+    <div class="column">{{ department.head }}</div>
+    <div class="column">{{ department.contactnumber }}</div>
   </div>
 </div>

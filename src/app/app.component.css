@@ -1,0 +1,50 @@
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+    background-color: deepskyblue;
+    padding: 10px;
+}
+
+.article {
+    padding: 10px;
+    margin: 10%;
+    box-shadow: 2px 2px 2px 2px #888;
+    overflow: auto;
+    clear: both;
+}
+.title {
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+    background-color: #efefef;
+}
+
+.button {
+    border: none;
+    color: white;
+    background-color: #58c358;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.column {
+    width: 33.33%;
+    float: left;
+    padding:10px;
+}
+
+.row {
+    width: 100%;
+    display: block;
+    float: left
+}
+
+.bold {
+    font-weight: 700;
+}
